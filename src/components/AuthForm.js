@@ -79,11 +79,29 @@ export default function AuthForm() {
     }
   };
 
+  const handleOAuthSignIn = (provider) => {
+    signIn(provider, {
+      callbackUrl,
+    });
+  };
+
   return (
     <div className={styles.authPage}>
       <h1>{isLogin ? "Sign In" : "Register"}</h1>
 
       {statusMessage && <p className={styles.statusMessage}>{statusMessage}</p>}
+
+      <div className={styles.oauthButtons}>
+        <button type="button" onClick={() => handleOAuthSignIn("github")}>
+          Continue with GitHub
+        </button>
+
+        <button type="button" onClick={() => handleOAuthSignIn("google")}>
+          Continue with Google
+        </button>
+      </div>
+
+      <div className={styles.divider}>or</div>
 
       <form onSubmit={handleSubmit} className={styles.authForm}>
         <div>
