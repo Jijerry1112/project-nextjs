@@ -1,0 +1,47 @@
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filterDropdown,
+.filterSearch {
+  display: flex;
+  align-items: center;
+}
+
+.filterContainer label {
+  font-weight: 700;
+}
+
+.filterContainer select,
+.filterContainer input {
+  height: 2rem;
+  margin: 0 0.5rem;
+}
+
+.filterContainer button, .filterContainer a {
+  padding: 0.25rem 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterContainer button, .filterContainer a {
+    align-self: flex-start;
+  }
+  
+  .filterDropdown,
+  .filterSearch {
+    margin-bottom: 0.5rem;
+  }
+  
+  .filterContainer select,
+  .filterContainer input {
+    flex: 1;
+  }
+}

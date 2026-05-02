@@ -1,0 +1,37 @@
+.add-profile {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 0 auto;
+  max-width:800px;
+}
+
+.add-profile h2 {
+  margin-top: 0;
+}
+
+.add-profile label {
+  display: block;
+  margin: 8px 0 4px;
+}
+
+.add-profile input[type="text"],
+.add-profile input[type="email"],
+.add-profile textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.add-profile button {
+  margin-top: 12px;
+  display:block;
+}
+.add-profile button:disabled {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+}
+.add-profile .success-message {
+  color: green;
+  margin-top: 10px;
+}
