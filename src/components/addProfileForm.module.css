@@ -3,7 +3,7 @@
   border-radius: 5px;
   padding: 16px;
   margin: 0 auto;
-  max-width:800px;
+  max-width: 800px;
 }
 
 .add-profile h2 {
@@ -17,21 +17,83 @@
 
 .add-profile input[type="text"],
 .add-profile input[type="email"],
+.add-profile input[type="file"],
 .add-profile textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.add-profile input[type="file"] {
+  padding: 6px;
+}
+
+.add-profile textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
 .add-profile button {
   margin-top: 12px;
-  display:block;
+  display: block;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--button-background-color, #111);
+  color: var(--button-text-color, #fff);
+  cursor: pointer;
 }
+
+.add-profile button:hover:not(:disabled) {
+  background-color: var(--button-hover-background-color, #333);
+}
+
 .add-profile button:disabled {
-  background-color: var(--button-hover-background-color);
-  color: var(--button-hover-text-color);
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
 }
-.add-profile .success-message {
-  color: green;
+
+.helperMessage {
+  color: #8a5a00;
+  background-color: #fff7e6;
+  border: 1px solid #ffd48a;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.errorMessage {
+  color: #b00020;
+  background-color: #ffecec;
+  border: 1px solid #ffb3b3;
+  border-radius: 4px;
+  padding: 8px;
   margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.successMessage {
+  color: #0b6b2f;
+  background-color: #e9f8ef;
+  border: 1px solid #a9dfbf;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.current-image {
+  margin-top: 12px;
+}
+
+.current-image img {
+  display: block;
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 6px;
 }
