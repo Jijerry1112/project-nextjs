@@ -1,50 +1,70 @@
 .navbar {
-  background-color: var(--blue-background-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #5f66ff;
+  color: white;
   padding: 1rem 3rem;
-}
-
-.navbar ul {
   display: flex;
   align-items: center;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
-.navbar li {
-  margin-right: 1rem;
-  margin-bottom: 0;
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
 }
 
 .navbar a {
+  color: white;
+  text-decoration: none;
   font-weight: 700;
-  color: var(--button-text-color);
 }
 
 .navbar a:hover {
-  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
-.themeToggle {
-  background-color: var(--button-text-color);
-  color: var(--button-background-color);
-  border: none;
-  border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.userEmail {
+  color: white;
+  font-size: 0.9rem;
   font-weight: 600;
-  transition: all 0.3s;
 }
 
-.themeToggle:hover {
-  opacity: 0.9;
+.signOutBtn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+.signOutBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.signInLink {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+@media (max-width: 720px) {
   .navbar {
     padding: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .links,
+  .authSection {
+    flex-wrap: wrap;
   }
 }
